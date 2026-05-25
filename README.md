@@ -1,60 +1,40 @@
-# Windows MAC Changer 🛡️
+# Cyber Security Projects Portfolio 🛡️
 
-A Python-based command-line utility to easily view, change, and restore the Media Access Control (MAC) address of network interfaces on Windows systems. It features an interactive, color-coded terminal UI and automatically handles administrative privileges.
+Welcome to my central repository for custom-built cybersecurity tools, scripts, and applications. This repository serves as a portfolio of my work in ethical hacking, network security, and system administration.
 
-Created by **Mohit Ingale**.
+Created and maintained by **Mohit Ingale**.
 
-## ✨ Features
+## 📂 Repository Structure
 
-* **Auto-Privilege Escalation:** Automatically detects and requests Administrator rights required for modifying network registry keys.
-* **Interface Discovery:** Dynamically fetches and lists all available dedicated network interfaces using `netsh`.
-* **Current MAC Display:** Quickly view the active MAC address of any selected adapter.
-* **Random MAC Generation:** Generates and applies a completely random, valid locally administered MAC address with a single click.
-* **Custom MAC Spoofing:** Allows you to input and apply a specific 12-character custom MAC address.
-* **Restore Default:** Easily strip custom registry keys to restore the network adapter's original factory hardware MAC address.
-* **Auto-Network Refresh:** Automatically disables the interface, flushes DNS, and reenables the connection to apply the new MAC address instantly without requiring a system reboot.
+Below is a list of the tools currently available in this repository. Navigate to each specific folder for detailed information, prerequisites, and usage instructions for that tool.
 
-## ⚙️ Prerequisites & Requirements
+### 1. [MAC-CHANGER](./MAC-CHANGER)
+A Python-based Windows command-line utility to easily view, spoof, and restore the Media Access Control (MAC) address of network interfaces. Features an interactive terminal UI, automatic privilege escalation, and instant network refreshing without requiring a system reboot.
 
-Before running this script, ensure your system meets the following requirements:
+*(More tools will be added here as they are developed...)*
 
-* **Operating System:** Windows 10 or Windows 11 (This script relies on Windows-specific commands like `netsh`, `getmac`, and the Windows Registry).
-* **Python:** Python 3.6 or higher installed on your system.
+## 🚀 Getting Started
 
-### Dependencies
-This script primarily uses Python's built-in libraries (`subprocess`, `random`, `ctypes`, `sys`, `os`, `time`). However, it requires one external library for the colored terminal interface:
+To download all the tools in this repository to your local machine, you can clone the entire repository using Git:
 
-* `colorama`
+```bash
+git clone [https://github.com/Mohitgingale/Cybersec-Projects.git](https://github.com/Mohitgingale/Cybersec-Projects.git)
+cd Cybersec-Projects
 
-## 🚀 Installation & Setup
+From there, navigate into the specific tool's directory (e.g., cd MAC-CHANGER) and follow the instructions in that tool's individual README.md file.
 
-1. **Clone the repository** (or download the files directly):
-   git clone https://github.com/Mohitgingale/Cybersec-Projects.git
-   cd Cybersec-Projects/MAC-CHANGER
 
-2. **Install the required dependencies:**
-   pip install colorama
 
-## 💻 How to Run
+⚠️ Legal Disclaimer
 
-1. Open your terminal or command prompt.
-2. Navigate to the directory containing the script.
-3. Run the script using Python:
-   python macchanger.py
+All scripts, tools, and information provided in this repository are created strictly for educational purposes, ethical hacking, and security research.
 
-4. **Note:** A User Account Control (UAC) prompt will appear asking for Administrator permissions. Click **Yes**. The script will then relaunch itself with the necessary privileges.
-5. Follow the on-screen interactive menu to select your interface and apply your desired MAC address.
+    Do not use these tools on any system, network, or application that you do not own or do not have explicit, written permission to test.
 
-## 🛠️ Technical Details: How it Works
+    The author is not responsible for any misuse, damage, or illegal activity caused by the use of these tools.
 
-Unlike Linux, where MAC spoofing is typically done via `ifconfig` or `ip link`, Windows requires modifying the system registry. This script automates that process by:
+    By using any code in this repository, you agree to take full responsibility for your actions.
 
-1. Locating the specific network adapter within `HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\{4d36e972-e325-11ce-bfc1-08002be10318}`.
-2. Appending or modifying the `NetworkAddress` string value with the new MAC.
-3. Disabling the adapter using `netsh interface set interface disable`.
-4. Flushing the DNS and releasing/renewing the IP configuration.
-5. Re-enabling the adapter to force Windows to read the new registry value.
 
-## ⚠️ Disclaimer
+---
 
-This tool is created for **educational purposes and ethical hacking/security testing only**. Changing your MAC address can help bypass network filters, enhance privacy on public Wi-Fi, or test network security configurations. Do not use this tool on networks you do not own or do not have explicit permission to test. The author is not responsible for any misuse or damage caused by this program.

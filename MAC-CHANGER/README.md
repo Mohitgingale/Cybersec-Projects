@@ -55,6 +55,10 @@ Unlike Linux, where MAC spoofing is typically done via `ifconfig` or `ip link`, 
 4. Flushing the DNS and releasing/renewing the IP configuration.
 5. Re-enabling the adapter to force Windows to read the new registry value.
 
+
+<img width="1359" height="748" alt="image" src="https://github.com/user-attachments/assets/367fcb7c-0bf3-45b2-a337-b41f136f7b69" />
+
+
 ## ⚠️ Disclaimer
 
 This tool is created for **educational purposes and ethical hacking/security testing only**. Changing your MAC address can help bypass network filters, enhance privacy on public Wi-Fi, or test network security configurations. Do not use this tool on networks you do not own or do not have explicit permission to test. The author is not responsible for any misuse or damage caused by this program.

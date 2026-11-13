@@ -1,0 +1,2 @@
+# Runtime dependency — keyboard listener + global hotkeys
+pynput>=1.7.6,<2.0s

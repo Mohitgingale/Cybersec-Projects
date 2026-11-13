@@ -1,0 +1,8 @@
+# UI / Dashboard
+customtkinter>=5.2.2
+
+# Packet Sniffing & Network Analysis
+scapy>=2.5.0
+
+# API / Webhook Integrations (Slack/Discord)
+requests>=2.31.0

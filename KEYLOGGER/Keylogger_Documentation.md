@@ -148,18 +148,7 @@ python3 keylog.py
 
 If steps 4–5 produce nothing, go to [§7](#7-troubleshooting--limitations) before assuming a code fault.
 
-### Screenshots
 
-*(Replace the placeholder image paths below with actual screenshots once you upload them to a `docs/` folder in your repository)*
-
-![Terminal Output](docs/screenshot-terminal.png)
-*Terminal running the logger with a live window-separator line scrolling past.*
-
-![Log File Excerpt](docs/screenshot-logfile.png)
-*A log excerpt showing two application switches and captured keystrokes with tags visible.*
-
-![Email Alert](docs/screenshot-email.png)
-*A received SMTP message with the `keylog <host> <time>` subject line.*
 
 ### Log Location
 
